@@ -7,7 +7,7 @@ function validateUser(req, res, next) {
     jsonwebtoken_1.verify(token, private_key, (err, decoded) => {
         if (err) {
             res.status(401).json({
-                status: 'failed',
+                status: 'Request failed',
                 message: 'Your session is expired',
                 data: null
             });
