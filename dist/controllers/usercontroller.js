@@ -58,7 +58,7 @@ class UserController {
         const userId = req.body.userId;
         User_1.User.findById(userId, (err, result) => {
             if (err) {
-                res.status(500).json({ status: 'failed', message: err });
+                res.status(500).json({ status: 'You are failed', message: err });
             }
             else {
                 res.json({ status: 'success', message: 'Pofile Updated!', data: result });
